@@ -1,0 +1,650 @@
+/* font-family: 'Antonio', sans-serif;
+font-family: 'Raleway', sans-serif; */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: 'Raleway', sans-serif;
+    font-size:10px;
+} 
+
+body .bg
+{
+
+   background-image: url("/img/sea-5495381_1280.jpg"); 
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat; 
+   min-height:100vh;
+   overflow-x: hidden;
+}
+
+.team
+{
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    background-color: #ccc;
+    position:relative;
+
+}
+
+.team img.gray
+{
+    position: absolute;
+    bottom:0;
+    left:-60%;
+    height:100%;
+    opacity:0.5;
+    animation:gray 4s linear infinite;
+}
+
+.team .member
+{
+    position: absolute;
+    top:15%;
+    left:0;
+    width:100%;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: text 4s linear infinite;
+}
+
+.member h1
+{
+    font-size:2.5rem;
+    margin-bottom: 10px;  
+}
+
+.member h2
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+@keyframes gray
+{
+    0%{
+    transform: translateX(0) scale(1);
+    opacity:0;
+}
+    8%{
+    opacity:0;
+}
+    13%{
+    opacity:0.5;
+}
+    87%{
+opacity:0.5;
+}
+    92%{
+    opacity:0;
+}
+            
+    100%{
+    transform: translateX(15%) scale(1.1);
+    opacity:0;
+}}
+           
+@keyframes text
+{
+    0%{
+    transform: scale(1);
+    opacity:0;
+}
+    8%{
+    opacity:0;
+}
+    13%{
+    opacity:1;
+}
+    87%{
+    opacity:1;
+}
+    92%{
+    opacity:0;
+}
+                
+    100%{
+    transform: scale(1.1);
+    opacity:0;
+}}
+/* ----------Media Queries dla sekcji TEAM------- */
+
+
+@media (orientation: landscape){
+    .team img.gray{
+        bottom:-20%;
+        left:-5%;
+        height: 150%;
+    }      
+    
+    .team .member{   
+                
+        width:60%;
+        top:10%;
+        left:auto;
+        right:0; 
+    }     
+}  
+
+@media (min-width: 768px){
+    .team img.gray
+    {
+        left:-30%;        
+    } 
+
+    .member h1
+    {
+        font-size:3rem;
+        margin-bottom: 15px;
+    }
+
+    .member h2
+    {
+
+        font-size: 2rem;
+    }
+
+}
+
+
+
+@media (min-width: 1024px){
+  
+
+    .member h1
+    {
+        font-size:4rem;    
+        margin-bottom: 20px;           
+    }
+
+    .member h2
+    {
+        font-size: 3rem;
+    }
+}
+
+
+@media (min-width: 1440px){
+    .team img.gray
+    {
+        left:-20%;
+        bottom:-45%;
+        height:180%;
+    }
+
+    .member h1
+    {                    
+        font-size:5rem;                  
+    }
+
+    .member h2
+    {
+                    
+        font-size: 3.5rem;
+    }
+}
+
+
+
+/* SEKCJA ABOUT */
+.about
+{    
+    margin: 30px 0;
+}
+
+.about h1
+{
+    font-size:3rem;
+    font-weight:300;
+    color:black;
+    padding:30px 10px 20px 10px;
+    text-align: center;
+    margin-bottom:30px;  
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+.art1, .art2, .art3
+{
+    width:80%;    
+    min-height:50vh;
+    margin: 20px auto;    
+    background-color: #ffffff;
+    opacity:0.9;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;   
+}
+
+.title {
+    flex-basis: 100%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.title h1{
+    font-size:2rem;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.photo-1 {
+    flex-basis:50%;
+}
+
+.photo-1 img{
+    width:100%;
+}
+
+.description
+{
+    flex-basis:80%;
+    text-align: center;
+    font-weight: 300;
+    padding:20px 0 0 0;
+    margin-top:15px;
+    margin-bottom:20px;
+    font-size:2rem;
+    letter-spacing:1px;   
+}
+
+
+/* ----------Media Queries dla sekcji ABOUT------ */
+
+@media (min-width: 576px){
+    .title h1{
+        font-size:2.5rem;        
+    }    
+    
+    .description
+    {
+    
+        text-align: center;
+        padding: 20px 5px 10px 5px;
+        font-size:2.2rem;
+        letter-spacing:2px;    
+    }   
+
+}
+
+
+@media (min-width: 768px){
+    .art1, .art2, .art3
+    {
+        min-height:30vh;
+        margin: 30px auto;    
+          
+    }
+
+    .title h1{
+        font-size:3rem;
+    
+    }
+
+    .photo-1 {
+        flex-basis:30%;
+        margin: 5px 15px 15px 5px;   
+    }
+
+
+    .description
+    {
+        flex-basis:60%;        
+        /* padding:20px; */
+
+    }
+
+}
+
+@media (min-width:992px){
+    .about h1{
+        font-size: 4rem;        
+    }
+
+    .photo-1 {
+        flex-basis:20%;
+        margin: 20px;        
+    }
+
+
+    .description
+    {
+        flex-basis:70%;
+        font-size: 2.5rem;        
+    }
+
+}
+
+@media (min-width:1200px){
+    .art1, .art2, .art3
+    {
+        width:70%;
+    }
+    
+
+    .title h1{
+        font-size:3.5rem;
+    }
+
+    .description{
+        font-size: 2.8rem;
+    }
+    
+
+}
+
+/* -------------SEKCJA HOBBY------------ */
+
+.hobby{
+    margin:30px auto;    
+}
+
+.hobby h1{
+    width:100%;
+    font-size:3rem;
+    color:black;
+    padding:30px 10px 20px 10px;
+    text-align: center;
+    margin-bottom:30px;  
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+.container{
+    display:flex;           
+    flex-direction:column;    
+    width:100%;  
+    min-height:50vh;   
+    margin: 20px 0;   
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color:#ccc;
+    opacity:0.9;
+    justify-content: center;
+    align-items: center;    
+}
+
+div .item{
+    flex-grow:1;
+    display:flex;
+    position:relative;
+    width:80%;   
+    margin-bottom: 20px;    
+      
+}
+
+.item img
+{    
+    width:100%;
+    border-radius:5px;   
+        
+}
+
+.item p {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;   
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+    height:5vh;
+    line-height: 5vh;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    color:white;
+    font-weight: bold;     
+    transition: font-size 1s;  
+
+}
+.item:hover p{
+    font-size:2.5rem;    
+}
+
+/* MEDIA QUERY SEKCJA HOBBY  */
+
+@media (min-width: 768px){
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;        
+        align-items: center;   
+    }
+
+
+    .item{
+        flex-basis:50%;
+        justify-content: center;        
+   }
+
+    .item img{
+        width:90%;                 
+    }
+
+
+    .item p{
+        width: 90%;
+    }    
+
+}
+
+/* -------------SEKCJA CONTACT---------      */
+
+.contact{
+    margin:30px auto;
+}
+
+.contact h1{
+    width:100%;
+    font-size:3rem;
+    color:black;
+    padding:30px 10px 20px 10px;
+    text-align: center;
+    margin-bottom:30px;  
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+
+}
+
+.wrapper
+{
+    display:flex;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-area{    
+    display:flex;
+    flex-direction:column;    
+    width:80%;
+    padding:20px;
+    min-height:50vh;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    
+}
+
+.form-area> .msg-area{
+    flex-grow:2;
+}
+
+.form-area> .details-area{
+    flex-grow:1;
+}
+
+
+div .msg-area{
+    display:flex;
+    flex-direction:column;    
+    align-items: center;   
+}
+
+
+.msg-area> textarea{
+    flex-grow:1;  
+    padding:5px;  
+    width: 70%;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 5px;   
+  
+}
+
+.details-area{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+} 
+
+.details-area input{
+    border:none;  
+    color:black;  
+    width:50%;
+    border-bottom:1px solid peru;
+    background-color: rgba(255,255,255,0.6);
+    padding:10px;
+    margin-bottom:5px;
+    border-radius: 5px;       
+} 
+
+textarea{
+    font-size:1.5rem;
+    margin:10px 0 15px 0;    
+}
+
+.details-area button{
+    margin-top:5px;
+    background-color: peru;
+    padding:10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+/* ------Media Query dla sekcji Contact------------- */
+
+@media (min-width:768px){
+
+    .form-area{    
+        display:flex;
+        flex-direction:row;               
+        
+    }
+
+    .form-area> .details-area{
+        justify-content: space-evenly;
+        align-items:center;
+    }
+    
+    .details-area input{
+        width:80%;        
+        padding:15px;
+        margin-bottom:15px;        
+        border-bottom:3px solid peru;        
+    }       
+    
+}  
+
+@media (min-width:1440px){
+    .form-area{
+        width:60%;
+        padding:30px;       
+
+    }
+
+}
+
+/* ------------Sekcja Footer------------- */
+footer{
+    width:100%;    
+    margin: 0 auto;
+    background-color: #ccc;
+}
+
+footer .container2{
+    display:flex;
+    flex-direction: column;
+    min-height:10vh;
+    justify-content: space-around;   
+
+}
+
+.container2 .fancy{
+    font-size:2rem;
+    text-transform: uppercase;
+    flex-grow:2;
+    letter-spacing: 1px;    
+    padding:20px; 
+    text-align: center;
+    
+}
+
+span{
+    opacity:0;
+    transition: all 0.4 ease;        
+} 
+
+
+span.fade{
+    opacity:1;    
+}
+
+.fancy2{    
+    font-size:1.5rem;    
+    text-align: center;
+    padding-top:10px;
+    margin-bottom:20px;   
+}
+
+.fancy2 a {
+    text-decoration: none;
+    color:peru;
+    cursor: pointer;
+}
+
+footer .container3{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:20px;   
+}
+
+.container3 .social-links{
+    flex-grow:1;
+    display:flex;      
+    justify-content: center;
+}
+
+.container3 .social-links li{
+    font-size:2rem;
+    padding:20px;
+}
+
+.social-links li  {
+    list-style: none;
+}
+
+.social-links li a{
+    color:black;
+    display:block;
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border:1px solid grey;
+    border-radius:20px;
+}
